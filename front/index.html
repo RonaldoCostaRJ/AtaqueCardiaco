@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- arquivo .css utilizado contendo o estilo utilizado -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Projeto</title>
+</head>
+
+<body>
+     <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+             <div class="tituloPagina">
+                <mark><h1 >Preditor de Ataque Cardiaco </h1></mark>
+            </div>                     
+        </div>
+        <div class="banner">
+                    <img src="img/cora2.jpg"
+                alt="y">
+        </div>
+    </header>
+    <!-- Criação de uma div maior com duas outras lado a lado no interior representando áreas para imput de dados e output( apresentação) dos dados, respectivamente  -->    
+    <div class="retangulo"  >    
+    <div class="inputs"  >
+     <!-- Área de inserção de uma nova busca por automóvel -->   
+
+     <!-- Título -->   
+     <mark><h4 style="text-align:center;width:100%;margin-top:5px;">Adicionar novos dados de Paciente anonimizado:</h4></mark>
+            <!-- Informações sobre a idade do paciente -->
+            <label for="age" class="label"> Idade:  
+                <input type="text" id="age" name="age"  />
+            </label>
+            <!-- Informações sobre o sexo do paciente -->            
+            <label for="sex" class="label"> Sexo: 
+                <select name="sex" id="sex-select" class="entrada">                    
+                    <option value="1">Masculino</option>                    
+                    <option value="0">Feminino</option>                    
+                </select>
+            </label>
+            <!-- Informações sobre o tipo de dor no peito do paciente -->            
+            <label for="cp" class="label"> Dor no peito: 
+                <select name="cp" id="cp-select" >
+                    <option value="3">Assintomático</option>
+                    <option value="1">Angina típica</option>
+                    <option value="2">Angina Atipica</option>                                       
+                </select>
+            </label> 
+
+            <label for="restecg" class="label_A">Eletrocardiograma:
+                <select name="restecg" id="restecg-select">                    
+                    <option value="0">Normal</option>
+                    <option value="1">Anormalidade da onda ST-T </option>
+                    <option value="2">Hipertrofia ventricular esquerda </option>
+                       <!--r (inversões da onda T e/ou elevação ou depressão do segmento ST > 0,05 mV) -->                   
+                </select>
+            </label>
+            
+                        
+            <label for="thall" class="label1"> Estrutura Muscular  
+                <select name="thall" id="thall-select">                    
+                    <option value="0">Normal</option>
+                    <option value="1">Defeito fixo</option>
+                    <option value="2">Defeito reversível</option>                     
+                </select>
+            </label>
+
+            <label for="exng" class="label1">Angina no exercício?:  
+                <select name="exng" id="exng-select">                    
+                    <option value="0">Não</option>
+                    <option value="1">Sim </option>                    
+                </select>
+            </label>
+
+            <label for="caa" class="label1"> Num. vasos principais:  
+                <select name="caa" id="caa-select">                    
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>    
+                    <option value="2">3</option>                   
+                </select>
+            </label>
+
+            <label for="fbs" class="label">Açúcar sangue é > 120:  
+                <select name="fbs" id="fbs-select">
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>                    
+                </select>
+            </label>
+            
+            <label for="slp" class="label1"> Inclinação segmento ST:  
+                <select name="slp" id="slp-select">                    
+                    <option value="0">Descendente</option>
+                    <option value="1">Plano </option>
+                    <option value="2">Ascendente </option>    
+                                    
+                </select>
+            </label>
+            <label for="oldpeak" class="label1">Depressão segmento ST:
+                <input type="text"  id="oldpeak" name="oldpeak" />
+            </label>
+           
+
+            <label for="chol" class="label"> Colesterol em mg/dl:   
+                <input type="text" id="chol"  name="chol"  />
+            </label>
+
+            
+            <!-- parâmetros numéricos de busca pelo modelo de automóvel -->
+            
+            <label for="trtbps" class="label"> Pressão arterial:
+                <input type="text" id="trtbps" name="trtbps" >
+            </label>
+            
+            
+            <!-- Açucar no sange -->           
+            
+            <!--resultados eletrocardiográficos em repouso -->
+            
+            <!-- Frequência cardíaca máxima alcançada -->
+                    
+            <label for="thalachh" class="label1">Freq. cardíaca máxima:
+                <input type="text"  id="thalachh" name="thalachh"    />
+            </label>
+            <!-- exercice induced angina -->
+
+            
+                       
+        <!-- Chamada à API para inserção de um novo Item -->           
+         <button onclick="newItem()" class="addBtn">Adicionar</button>      
+    </div>
+    <!-- Div, representando contemplando as informações de saída, contendo um grid de retorno e campos de busca por ID  --> 
+    <div class="outputs"   
+    
+            <section class="items">
+                    <mark><h4 style="text-align:left;position: relative; left:20px; width:100%;margin-top:5px;">Pesquise pelo 'Modelo' desejado ou clique em 'Todos', para uma visualização completa das buscas cadastradas</h4></mark>
+                    <input type="text" id="consultaPaciente" name="consultaPaciente"  maxlength="30" size="30"  />
+                    <button onclick="getPaciente()" id="btconsultaPaciente" class="ConsultaDados"> Pesquisar</button>
+                    <button onclick="getList()" id="btconsultaPacientes" class="ConsultaDadosCompleto"> Carrega Predições </button>       
+                                  
+                <div> 
+                    
+                
+                <table id="myTable">
+                <tr>
+                    <th>Id</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>                    
+                    <th>Dor Peito</th>
+                    <th>Pressão arterial</th>
+                    <th>Colesterol</th>
+                    <th>Açucar no sangue</th>         
+                    <th>Eletro</th>
+                    <th>F.Cardíaca</th>
+                    <th>Angina Exerc</th>
+                    <th>Depre. Seg.ST</th>                
+                    <th>Incl. Seg. ST</th>
+                    <th>N. vasos</th>
+                    <th>Estr. Muscular</th>
+                    <th>Output</th>
+                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                </tr>
+            </table>
+            </div>
+        </section>
+    </div>
+</div>
+    <!-- script utilizado contendo a lógica de programação javascript utilizada. -->    
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+

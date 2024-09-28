@@ -1,0 +1,277 @@
+body,
+ul,
+
+li {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(238, 236, 222);
+}
+
+header {
+    background-color: rgb(225, 222, 199);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    background-color: rgb(175, 175, 180);
+    display: inline-block;
+    padding: 2px 0px;
+    position: sticky;
+    top: 0px;
+}
+
+.banner {
+    height: 235px;
+    overflow: hidden;
+}
+
+
+mark { 
+    
+    color: rgb(0, 6, 118);
+}
+
+.banner img {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+.novoItem {
+    background-color:  rgba(120, 158, 15, 0.976);
+    margin: 0px 0px 0px 0px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+.inputs {
+    background-color: rgb(230, 230, 236);
+    color: rgb(0, 0, 0);
+    width: 100vw;   
+    display: inline-block;
+    padding: 2px 2px 2px 15px;  
+    position: relative;
+    top: 5px;
+    }
+
+input {
+    display: inline-block;
+    width: 3vw;   
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+.outputs {
+    background-color: rgb(175, 175, 180);
+    color: rgb(6, 6, 6);
+    width: 150vw;
+    display: inline-block;
+    padding: 2px 2px 2px 5px;  
+    position: relative;
+    top: 5px;
+    }
+    
+    .retangulo {
+        color: rgb(255, 255, 255);
+        width: 100%;
+        background-color: rgb(68, 3, 3);
+        padding: 2px 2px 2px 5px;  
+        position: sticky;
+        top: 5px;
+        display: flex;
+        justify-content: space-between;
+        }
+
+label
+{
+left:50;  
+padding: 2px 10px 5px 20px;  
+font-size:15px;
+display: inline-block;
+display: flex;
+width:400px;
+}
+
+
+
+#age{
+   position: relative;
+    left: 140px;
+    top: 0px;
+
+}
+#sex-select{
+    position: relative;
+    left: 145px;
+    top: 0px;
+
+}
+
+
+
+#cp-select{
+    position: relative;
+    left: 95px;
+    top: 0px;
+
+}
+
+
+
+
+#restecg-select{
+    position: relative;
+    left: 58px;
+    top: 0px;
+}
+
+#thall-select{
+    position: relative;
+    left: 60px;
+    top: 0px;
+}
+
+#exng-select{
+    position: relative;
+    left: 43px;
+    top: 0px;
+}
+
+#caa-select{
+    position: relative;
+    left: 35px;
+    top: 0px;
+}
+
+#fbs-select{
+    position: relative;
+    left: 24px;
+    top: 0px;
+}
+#slp-select{
+    position: relative;
+    left: 22px;
+    top: 0px;
+}
+
+#oldpeak{
+    position: relative;
+    left: 20px;
+    top: 0px;
+}
+
+#chol{
+    position: relative;
+    left: 47px;
+    top: 0px;
+}
+#trtbps{
+    position: relative;
+    left: 78px;
+    top: 0px;
+}
+
+#thalachh{
+    position: relative;
+    left: 29px;
+    top: 0px;
+}
+
+.label33
+{
+font-size:15px;
+color: rgb(0, 6, 118);
+
+}
+
+.addBtn {
+    border: 0;
+    background-color: rgba(97, 21, 11, 0.993);
+    color: white;
+    padding: 10px 10px;
+    width: 300px;
+    height: 30px;
+    /*display: block;*/
+    margin: 15px;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 4px;
+    
+}
+
+.addBtn:hover {
+    background-color: #2ab53a;
+    color: white;
+}
+
+
+
+#consultaModelo{
+    position: relative;
+    left: 20px;
+    top: 0px;
+}
+.ConsultaDados{
+        position: relative;
+        left: 20px;
+        top: 0px;
+}
+    
+.ConsultaDadosCompleto{
+    position: relative;
+    left: 25px;
+    top: 0px;
+}
+
+.items {
+    
+    margin: 130;
+    height: 6em;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.close:hover {
+    color: #f44336;
+    font-weight: bolder;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 18px 12px 10px;
+    font-size: 10px;
+    transition: 0.2s;
+    text-align: start;
+}
+
+table{
+    background-color: rgb(180, 170, 170);
+    position: relative;
+    left: 2px;
+    top: 15px;
+
+    width: 93%;
+}
+
+tr:nth-child(odd){
+    background-color: #dfddda;
+}
+
+th:nth-child(1){
+    width: 80%;
+}
+tr:hover {
+    background: rgb(200, 199, 199);
+}
